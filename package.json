@@ -18,6 +18,7 @@
 	"homepage": "https://github.com/KGKallasmaa/Pipe-Lightning#readme",
 	"dependencies": {
 		"express": "^4.16.3",
-		"nodemon": "^1.17.3"
+		"nodemon": "^1.17.3",
+		"body-parser": "^1.18.2"
 	}
 }
