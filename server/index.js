@@ -25,7 +25,6 @@ deals[key] = [];
     app.use(bodyParser())
         .post('/adddeal', function(req, res) {
             //  console.log(req.body) // populated!
-            console.log(req.body.current.currency)
             var lat = req.body.current["7b138ae55693cdfda5bf88c8b8c8de7df332a3f8_lat"];
             var long = req.body.current["7b138ae55693cdfda5bf88c8b8c8de7df332a3f8_long"];
             var status = req.body.current["status"];
@@ -40,12 +39,6 @@ deals[key] = [];
                 };
                 deals[key].push(data);
             }
-
-
-            console.log(deals);
             res.end('OK');
         })
         .listen(PORT,() => console.log("test"));
-
-
-console.log(deals);
