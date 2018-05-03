@@ -42,3 +42,7 @@ deals[key] = [];
             res.end('OK');
         })
         .listen(PORT,() => console.log("test"));
+
+app.get('/deals', function(req, res) {
+  res.send(deals);
+});
