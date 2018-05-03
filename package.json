@@ -20,17 +20,12 @@
 	},
 	"homepage": "https://github.com/KGKallasmaa/Pipe-Lightning#readme",
 	"dependencies": {
-<<<<<<< Updated upstream
 		"express": "^4.16.3",
 		"nodemon": "^1.17.3"
-	}
-=======
-		"express": "^4.16.3"
 	},
 	"keywords": [
 		"node",
 		"heroku",
 		"express"
 	  ]
->>>>>>> Stashed changes
 }
