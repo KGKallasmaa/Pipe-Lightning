@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node server/index.js"
+		"start": "nodemon server/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -17,6 +17,7 @@
 	},
 	"homepage": "https://github.com/KGKallasmaa/Pipe-Lightning#readme",
 	"dependencies": {
-		"express": "^4.16.3"
+		"express": "^4.16.3",
+		"nodemon": "^1.17.3"
 	}
 }
