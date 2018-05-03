@@ -16,7 +16,14 @@ function createMarkers(markers) {
 			position: el,
 			map: map,
 			title: 'coordinates',
-			animation: google.maps.Animation.DROP
+			animation: google.maps.Animation.DROP,
+			icon: {
+				path: google.maps.SymbolPath.CIRCLE,
+				scale: 8,
+				fillColor: '#F00',
+				fillOpacity: 1,
+				strokeWeight: 0.2
+			}
 		});
 		marker.addListener('click', () => toggleBounce(marker));
 		return marker;
