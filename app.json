@@ -1,0 +1,8 @@
+{
+    "name": "Pipe-lightning",
+    "description": "Pipe-lightning",
+    "repository": "https://github.com/KGKallasmaa/Pipe-Lightning,",
+    "keywords": ["node", "express", "heroku"],
+    "image": "heroku/nodejs"
+  }
+  
