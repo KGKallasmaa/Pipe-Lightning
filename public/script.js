@@ -16,7 +16,7 @@ function initMap() {
 
 
 function createMarkers(markers) {
-	if (!markers.isEmpty) {
+	if (markers.deals[0] === undefined) {
 		var markers = {};
 		markers["deals"] = []
 		var data = {
