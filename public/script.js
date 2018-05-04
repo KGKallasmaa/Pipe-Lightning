@@ -17,7 +17,15 @@ function initMap() {
 
 function createMarkers(markers) {
 	if (!markers.isEmpty) {
-		markers = [{lat: 50.5689, lng: 60.4565}, {lat: 51.5689, lng: 61.4565}];
+		var markers = {};
+		markers["deals"] = []
+		var data = {
+			user_id: 1355020,
+			status: "won",
+			lat:58.3606987,
+			long:26.7277565
+		};
+		markers["deals"].push(data);
 	}
 	markers.deals.map(el => {
 		var pos = { lat: el.lat, lng: el.long }
