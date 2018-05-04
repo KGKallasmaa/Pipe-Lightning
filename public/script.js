@@ -16,9 +16,10 @@ function initMap() {
 
 /*
 function createMarkers(markers) {
-	markers.map(el => {
+	markers.deals.map(el => {
+		var pos = { lat: el.lat, lng: el.long }
 		const marker = new google.maps.Marker({
-			position: el,
+			position: pos,
 			map: map,
 			title: 'coordinates',
 			animation: google.maps.Animation.DROP,
