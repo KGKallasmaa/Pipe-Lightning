@@ -2,10 +2,9 @@
 	position: absolute;
 
 	left: 500px;
-	top: 60px;
-	height: 90%;
+	top: 0;
+	height: 100%;
 	width: 1000px;
-	margin: auto;
 	border: 5px solid lightblue;
 }
 
@@ -17,12 +16,13 @@ header {
 .tabel {
 	height: 350px;
 	width: 300px;
-	margin: 100px;
+	margin-left: 100px;
+	margin-top: 60px;
 	background-color: white;
 }
 
 h1 {
-	margin: 0;
+	margin-top: 20px;
 	color: yellow;
 	font-family: fontz;
 	padding: 10px;
