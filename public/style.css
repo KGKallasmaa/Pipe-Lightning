@@ -1,0 +1,44 @@
+#google-map {
+	position: absolute;
+
+	left: 500px;
+	top: 0;
+	height: 100%;
+	width: 1000px;
+	border: 5px solid lightblue;
+}
+
+header {
+	background-color: black;
+}
+
+
+.tabel {
+	height: 350px;
+	width: 300px;
+	margin-left: 100px;
+	margin-top: 60px;
+	background-color: white;
+}
+
+h1 {
+	margin-top: 20px;
+	color: yellow;
+	font-family: fontz;
+	padding: 10px;
+	text-align: center;
+
+}
+@font-face {
+	font-family: fontz;
+	src: url(fontz.ttf) format('truetype');
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+
+}
