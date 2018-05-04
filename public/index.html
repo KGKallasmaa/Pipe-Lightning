@@ -1,8 +1,3 @@
-<?php
-$actual_link = "http://$_SERVER[HTTP_HOST]".":8080"."$_SERVER[REQUEST_URI]";
-header('Location: '.$actual_link);
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,68 +11,10 @@ header('Location: '.$actual_link);
 </head>
 
 <body>
-<script>
-    /*
-    <p>Top players(value)</p>
-<div id="top_player_value">
-<ul>
-    <li>Where</li>
-    <li>were</li>
-    <li>I?</li>
-</ul>
-</div>
-<button onclick="myFunction()">Hide top players (by value)</button>
 
-<p>Top players(time)</p>
-<div id="top_player_time"><div>
-    <ul>
-        <li>I</li>
-        <li>were</li>
-        <li>here</li>
-    </ul>
-</div>
 
-<button onclick="myFunction2()">Hide top players (by time)</button>
-<p>Top players(nr of deals)</p>
-    <div id="top_player_deal">
-        <ul>
-            <li>Where</li>
-            <li>were</li>
-            <li>you?</li>
-        </ul>
-    </div>
 
-<button onclick="myFunction3()">Hide top players (by deals)</button>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("top_player_value");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function myFunction2() {
-        var x = document.getElementById("top_player_time");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function myFunction3() {
-        var x = document.getElementById("top_player_deal");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    */
-
-</script>
-    <div id="google-map">
+<div id="google-map">
         <script src="script.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2FsW14KbTsucoHVOkr98rTWM_DIeCsY&callback=initMap" async
                 defer></script>

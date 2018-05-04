@@ -12,7 +12,7 @@ var colors = ['#F00', '#000000', '#808080','#800000','#FFFC33','#7FFF33','#33FFA
 function initMap() {
 	map = new google.maps.Map(document.getElementById('google-map'), {
 		center: { lat: 43, lng:25},
-		zoom: 6,
+		zoom: 2,
 	});
 
     if (navigator.geolocation) {
@@ -40,6 +40,7 @@ function createMarkers(markers) {
 			user_id: 1355020,
 			status: "won",
 			lat:58.3606987,
+            label: "sample point",
 			long:26.7277565
 		};
 		markers["deals"].push(data);
@@ -50,7 +51,7 @@ function createMarkers(markers) {
 		if (el.value < min){min = el.value;}
         else if (el.value > max){max = el.value;}
 
-        if (colors.size != 0){
+        if (colors.size != 0 && !(el.user_id in color_dict) ){
 		    var color = colors[Math.floor(Math.random()*colors.length)];
             color_dict[el.user_id] = color;
             var index = colors.indexOf(color);
@@ -71,10 +72,12 @@ function createMarkers(markers) {
 				path: google.maps.SymbolPath.CIRCLE,
 				scale: size,
 				fillColor:color_dict[el.user_id],
+				label:el.title,
 				fillOpacity: 1,
 				strokeWeight: 0.2
 			}
 		});
+        playSound();
 		marker.addListener('click', () => toggleBounce(marker));
 		return marker;
 	});
@@ -106,6 +109,12 @@ function toggleBounce(marker) {
 		marker.setAnimation(null);
 	} else {
 		marker.setAnimation(google.maps.Animation.BOUNCE);
+
         setTimeout(function(){ marker.setAnimation(null); }, 750*10);
 	}
+}
+
+function playSound() {
+    var audio = new Audio("http://freesound.org/data/previews/91/91924_634166-lq.mp3");
+    audio.play();
 }
