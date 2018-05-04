@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #google-map {
 	position: absolute;
 
@@ -30,8 +29,6 @@ h1 {
 	text-align: center;
 
 }
-=======
->>>>>>> c5f21a1be0fe04212ea19df71e461219785af377
 @font-face {
 	font-family: fontz;
 	src: url(fontz.ttf) format('truetype');
@@ -43,31 +40,5 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #000000;
-}
 
-.main {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-.main aside {
-	width: 40%;
-}
-
-#google-map {
-	width: 60%;
-	border: 5px solid lightblue;
-	height: 100%;
-}
-h1 {
-	text-align: center;
-	color: yellow;
-	font-family: fontz;
-}
-#board{
-	height: 20%;
-	margin: 0;
-	padding: 0;
-	background-color: #ffffff;
 }

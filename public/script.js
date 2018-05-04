@@ -102,11 +102,7 @@ function createMarkers(markers) {
         }
 
         document.getElementById("name_revenue").innerHTML = sales_data.join("");
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> c5f21a1be0fe04212ea19df71e461219785af377
 		return marker;
 	});
 }
@@ -159,7 +155,3 @@ function change_revenue(user_id,value) {
 	}
 
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> c5f21a1be0fe04212ea19df71e461219785af377
