@@ -27,6 +27,17 @@ function initMap() {
 
 
 function createMarkers(markers) {
+	if (markers.deals[0] === undefined) {
+		var markers = {};
+		markers["deals"] = []
+		var data = {
+			user_id: 1355020,
+			status: "won",
+			lat:58.3606987,
+			long:26.7277565
+		};
+		markers["deals"].push(data);
+	}
 	markers.deals.map(el => {
 		var pos = { lat: el.lat, lng: el.long }
 
