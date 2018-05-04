@@ -26,6 +26,7 @@ deals[key] = [];
             var user_id = req.body.current["user_id"];
             var value = req.body.current["user_id"];
 
+            var timestamp = req.body["timestamp_micro"];
 
             if (status == 'won'){
                 var data = {
@@ -33,7 +34,8 @@ deals[key] = [];
                     status: status,
                     value: value,
                     lat:lat,
-                    long:long
+                    long:long,
+                    timestamp:timestamp
                 };
                 deals[key].push(data);
             }
