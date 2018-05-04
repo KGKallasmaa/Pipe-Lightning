@@ -76,9 +76,14 @@ function createMarkers(markers) {
 				fillOpacity: 1,
 				strokeWeight: 0.2
 			}
+        
 		});
         playSound();
 		marker.addListener('click', () => toggleBounce(marker));
+        
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function(){ marker.setAnimation(null); }, 3750);
+        
 		return marker;
 	});
 }
