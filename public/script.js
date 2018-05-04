@@ -42,7 +42,7 @@ function initMap() {
 }
 
 function createMarkers(markers) {
-	if (markers.deals[0] === undefined) {
+	if (false) {
 		var markers = {};
 		markers['deals'] = [];
 		var data = {
