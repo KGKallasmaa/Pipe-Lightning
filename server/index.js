@@ -24,7 +24,7 @@ deals[key] = [];
             var long = req.body.current["7b138ae55693cdfda5bf88c8b8c8de7df332a3f8_long"];
             var status = req.body.current["status"];
             var user_id = req.body.current["user_id"];
-            var value = req.body.current["user_id"];
+            var value = req.body.current["value"];
             var title = req.body.curret["title"];
 
             var timestamp = req.body["timestamp_micro"];

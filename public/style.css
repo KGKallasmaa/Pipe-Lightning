@@ -31,3 +31,9 @@ h1 {
 	color: yellow;
 	font-family: fontz;
 }
+#board{
+	height: 20%;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
