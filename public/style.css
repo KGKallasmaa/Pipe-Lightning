@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-#google-map {
-	position: absolute;
-
-	left: 500px;
-	top: 60px;
-	height: 90%;
-	width: 1000px;
-	margin: auto;
-	border: 5px solid lightblue;
-}
-
 header {
 	background-color: black;
 }
-
 
 .tabel {
 	height: 350px;
@@ -28,10 +15,7 @@ h1 {
 	font-family: fontz;
 	padding: 10px;
 	text-align: center;
-
 }
-=======
->>>>>>> c5f21a1be0fe04212ea19df71e461219785af377
 @font-face {
 	font-family: fontz;
 	src: url(fontz.ttf) format('truetype');
@@ -65,7 +49,7 @@ h1 {
 	color: yellow;
 	font-family: fontz;
 }
-#board{
+#board {
 	height: 20%;
 	margin: 0;
 	padding: 0;
