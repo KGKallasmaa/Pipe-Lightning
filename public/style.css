@@ -1,24 +1,3 @@
-#google-map {
-	position: absolute;
-
-	left: 500px;
-	top: 60px;
-	height: 90%;
-	width: 1000px;
-	margin: auto;
-	border: 5px solid lightblue;
-}
-
-#tekst {
-	background-color: red;
-}
-h1 {
-	position: absolute;
-	color: yellow;
-	left: 900px;
-	font-family: fontz;
-
-}
 @font-face {
 	font-family: fontz;
 	src: url(fontz.ttf) format('truetype');
@@ -30,4 +9,25 @@ body {
 	margin: 0px;
 	padding: 0;
 	background-color: #000000;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.main aside {
+	width: 40%;
+}
+
+#google-map {
+	width: 60%;
+	border: 5px solid lightblue;
+	height: 100%;
+}
+h1 {
+	text-align: center;
+	color: yellow;
+	font-family: fontz;
 }
