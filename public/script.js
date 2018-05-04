@@ -78,7 +78,7 @@ function createMarkers(markers) {
 			}
         
 		});
-        playSound();
+        moneySound();
 		marker.addListener('click', () => toggleBounce(marker));
         
         marker.setAnimation(google.maps.Animation.BOUNCE);
@@ -119,7 +119,7 @@ function toggleBounce(marker) {
 	}
 }
 
-function playSound() {
+function moneySound() {
     var audio = new Audio("http://freesound.org/data/previews/91/91924_634166-lq.mp3");
     audio.play();
 }
