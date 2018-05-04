@@ -6,11 +6,7 @@ var max = Number.MIN_SAFE_INTEGER;
 var min = Number.MAX_SAFE_INTEGER;
 
 var color_dict = {};
-var colors = ['#663399','#FF0000','#BC8F8F','#4169E1','#8B4513','#FA807','#F4A460','#F2E8B57','#FFF5EE','#A0522D','#C0C0C0','#87CEEB','#6A5ACD','#708090','#708090','#FFFAFA','#00FF7F','#4682B4','#D2B48C','#008080','#D8BFD8','#FF6347','#40E0D0','#EE82EE','#F5DEB3','#FFFFFF','#F5F5F5','#FFFF00','#9ACD32'];
-
-
-var user_name_sum = {};
-
+var colors = ['#F00', '#000000', '#808080','#800000','#FFFC33','#7FFF33','#33FFA4','#338AFF','#5933FF'];
 
 
 function initMap() {
@@ -63,8 +59,8 @@ function createMarkers(markers) {
                 colors.splice(index, 1);
             }
         }
-        //increase revenue
-        change_revenue(el.user_id,el.value);
+
+
 
 		var size = size_f(el.value);
 		const marker = new google.maps.Marker({
@@ -80,29 +76,14 @@ function createMarkers(markers) {
 				fillOpacity: 1,
 				strokeWeight: 0.2
 			}
-
+        
 		});
         moneySound();
 		marker.addListener('click', () => toggleBounce(marker));
-
+        
         marker.setAnimation(google.maps.Animation.BOUNCE);
         setTimeout(function(){ marker.setAnimation(null); }, 3750);
-
-        //update leadership board
-
-
-        var sales_data = [];
-
-        for (var key in user_name_sum) {
-            sales_data.push(
-                "<br>",
-                "<p>"+"hi"+"</p>",
-                "</br>"
-            );
-        }
-
-        document.getElementById("name_revenue").innerHTML = sales_data.join("");
-
+        
 		return marker;
 	});
 }
@@ -141,17 +122,4 @@ function toggleBounce(marker) {
 function moneySound() {
     var audio = new Audio("http://freesound.org/data/previews/91/91924_634166-lq.mp3");
     audio.play();
-}
-
-function change_revenue(user_id,value) {
-	// do we have that user_id?
-	if (!(user_id in user_name_sum)){
-		//we don't
-        user_name_sum[user_id] = value;
-	}
-	else{
-		//we do
-        user_name_sum[user_id] = user_name_sum[user_id] +value;
-	}
-
 }
