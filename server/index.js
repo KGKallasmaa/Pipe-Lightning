@@ -13,13 +13,6 @@ var server = app.listen(8080, function() {
 });
 
 
-var obj = {
-    "nm_questionario":{"isEmpty":"MSGE1 - Nome do Question&aacute;rio"},
-    "ds_questionario":{"isEmpty":"MSGE1 - Descri&ccedil;&atilde;o do Question&aacute;rio"},
-    "dt_inicio_vigencia":{"isEmpty":"MSGE1 - Data de Vig&ecirc;ncia"}
-};
-console.log(Object.keys(obj));
-
 const key = 'deals';
 var deals = {};
 deals[key] = [];
@@ -31,11 +24,14 @@ deals[key] = [];
             var long = req.body.current["7b138ae55693cdfda5bf88c8b8c8de7df332a3f8_long"];
             var status = req.body.current["status"];
             var user_id = req.body.current["user_id"];
+            var value = req.body.current["user_id"];
+
 
             if (status == 'won'){
                 var data = {
                     user_id: user_id,
                     status: status,
+                    value: value,
                     lat:lat,
                     long:long
                 };
@@ -44,6 +40,8 @@ deals[key] = [];
             res.end('OK');
         })
         .listen(PORT,() => console.log("test"));
+
+    console.log(deals);
 
 app.get('/deals', function(req, res) {
   res.send(deals);
