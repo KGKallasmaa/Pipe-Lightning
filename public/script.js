@@ -56,7 +56,6 @@ function initMap() {
 		});
 	}
 
-	fetch('/deals');
 	setInterval(function() {
 		fetch('/deals')
 			.then(res => res.json())
