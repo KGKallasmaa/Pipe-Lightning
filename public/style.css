@@ -10,7 +10,15 @@
 }
 
 header {
-	background-color: orange;
+	background-color: black;
+}
+
+
+.tabel {
+	height: 350px;
+	width: 300px;
+	margin: 100px;
+	background-color: white;
 }
 
 h1 {
