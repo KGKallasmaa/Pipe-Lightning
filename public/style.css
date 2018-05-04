@@ -9,14 +9,23 @@
 	border: 5px solid lightblue;
 }
 
-#tekst {
+.kast {
 	background-color: red;
+	color: red;
 }
+
+header {
+	background-color: orange;
+}
+
+
+
 h1 {
-	position: absolute;
+	margin: 0;
 	color: yellow;
-	left: 900px;
 	font-family: fontz;
+	padding: 10px;
+	text-align: center;
 
 }
 @font-face {
@@ -27,7 +36,8 @@ h1 {
 html,
 body {
 	height: 100%;
-	margin: 0px;
+	margin: 0;
 	padding: 0;
 	background-color: #000000;
+
 }
