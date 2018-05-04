@@ -23,6 +23,35 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2FsW14KbTsucoHVOkr98rTWM_DIeCsY&callback=initMap" async
     defer></script>
 
+  <button onclick="myFunction3()">Hide top players (by deals)</button>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("top_player_value");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function myFunction2() {
+      var x = document.getElementById("top_player_time");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function myFunction3() {
+      var x = document.getElementById("top_player_deal");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+  </script>
 </body>
 
 </html>
