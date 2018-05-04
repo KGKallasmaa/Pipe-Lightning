@@ -1,125 +1,166 @@
+<?php
+$actual_link = "http://$_SERVER[HTTP_HOST]".":8080"."$_SERVER[REQUEST_URI]";
+header('Location: '.$actual_link);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pipe-Lightning</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pipe-Lightning</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Pipe-Lightning</h1>
-  </header>
+  
   <div class="main">
     <div class="tabel">
       <table class="table table-dark">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Value</th>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Value</th>
 
-          </tr>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
 
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
 
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">7</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">8</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">9</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-          <tr>
-            <th scope="row">10</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+        </tr>
         </tbody>
-      </table>
-    </div>
+        </table>
+        <h1>PipeLightning</h1>
 
-    <div id="google-map">
+          <div id="google-map">
+              <script src="script.js"></script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2FsW14KbTsucoHVOkr98rTWM_DIeCsY&callback=initMap" async
+                      defer></script>
+          </div>
+
     </div>
   </div>
 
-  <button onclick="myFunction3()">Hide top players (by deals)</button>
 
-  <script src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX2FsW14KbTsucoHVOkr98rTWM_DIeCsY&callback=initMap" async
-    defer></script>
-  <script>
+
+
+
+<script>
+    /*
+    <p>Top players(value)</p>
+<div id="top_player_value">
+<ul>
+    <li>Where</li>
+    <li>were</li>
+    <li>I?</li>
+</ul>
+</div>
+<button onclick="myFunction()">Hide top players (by value)</button>
+
+<p>Top players(time)</p>
+<div id="top_player_time"><div>
+    <ul>
+        <li>I</li>
+        <li>were</li>
+        <li>here</li>
+    </ul>
+</div>
+
+<button onclick="myFunction2()">Hide top players (by time)</button>
+<p>Top players(nr of deals)</p>
+    <div id="top_player_deal">
+        <ul>
+            <li>Where</li>
+            <li>were</li>
+            <li>you?</li>
+        </ul>
+    </div>
+
+<button onclick="myFunction3()">Hide top players (by deals)</button>
+
+<script>
     function myFunction() {
-      var x = document.getElementById("top_player_value");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+        var x = document.getElementById("top_player_value");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
     function myFunction2() {
-      var x = document.getElementById("top_player_time");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+        var x = document.getElementById("top_player_time");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
     function myFunction3() {
-      var x = document.getElementById("top_player_deal");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
+        var x = document.getElementById("top_player_deal");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
     }
+    */
 
-  </script>
+</script>
 </body>
 
 </html>
