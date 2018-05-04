@@ -31,15 +31,12 @@ deals[key] = [];
             var long = req.body.current["7b138ae55693cdfda5bf88c8b8c8de7df332a3f8_long"];
             var status = req.body.current["status"];
             var user_id = req.body.current["user_id"];
-            var timestamp = req.body["timestamp_micro"];
-
             if (status == 'won'){
                 var data = {
                     user_id: user_id,
                     status: status,
                     lat:lat,
-                    long:long,
-                    timestamp:timestamp
+                    long:long
                 };
                 deals[key].push(data);
             }
@@ -49,4 +46,5 @@ deals[key] = [];
 
 app.get('/deals', function(req, res) {
   res.send(deals);
+  deals[key] = [];
 });
