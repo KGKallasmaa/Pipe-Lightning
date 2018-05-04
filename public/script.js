@@ -19,9 +19,11 @@ function initMap() {
     }
 
 	fetch('/deals')
+    setInterval(function() {
+        fetch('/deals')
 		.then(res => res.json())
-		.then(createMarkers);
-		//createMarkers(markers);
+		.then(createMarkers)
+    }, 1000);
 }
 
 
