@@ -6,6 +6,8 @@ app.use(express.static('public'));
 
 const PORT = process.env.PORT || 3000;
 
+const mockData = [{ lat: 50.577171, lng: 20.435938 }, { lat: 50.537171, lng: 20.465938 }];
+
 var server = app.listen(8080, function() {
     console.log('Ready on port %d', server.address().port);
 });

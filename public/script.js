@@ -10,6 +10,8 @@ function initMap() {
 		.then(createMarkers);
 }
 
+const markers = [{lat: 50.5689, lng: 60.4565}];
+/*
 function createMarkers(markers) {
 	markers.map(el => {
 		const marker = new google.maps.Marker({
@@ -24,6 +26,20 @@ function createMarkers(markers) {
 				fillOpacity: 1,
 				strokeWeight: 0.2
 			}
+		});
+		marker.addListener('click', () => toggleBounce(marker));
+		return marker;
+	});
+}
+*/
+
+function createMarkers(markers) {
+	markers.map(el => {
+		const marker = new google.maps.Marker({
+			position: el,
+			map: map,
+			title: 'coordinates',
+			animation: google.maps.Animation.DROP
 		});
 		marker.addListener('click', () => toggleBounce(marker));
 		return marker;
