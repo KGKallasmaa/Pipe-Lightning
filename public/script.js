@@ -14,7 +14,7 @@ function initMap() {
 }
 
 
-/*
+
 function createMarkers(markers) {
 	markers.deals.map(el => {
 		var pos = { lat: el.lat, lng: el.long }
@@ -35,8 +35,9 @@ function createMarkers(markers) {
 		return marker;
 	});
 }
-*/
 
+
+/*
 function createMarkers(markers) {
 	markers.map(el => {
 		const marker = new google.maps.Marker({
@@ -49,6 +50,7 @@ function createMarkers(markers) {
 		return marker;
 	});
 }
+*/
 
 function toggleBounce(marker) {
 	if (marker.getAnimation() !== null) {
