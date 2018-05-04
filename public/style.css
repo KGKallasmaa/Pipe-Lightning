@@ -1,33 +1,20 @@
-#google-map {
-	position: absolute;
-
-	left: 500px;
-	top: 0;
-	height: 100%;
-	width: 1000px;
-	border: 5px solid lightblue;
-}
-
 header {
 	background-color: black;
 }
 
-
 .tabel {
 	height: 350px;
 	width: 300px;
-	margin-left: 100px;
-	margin-top: 60px;
+	margin: 100px;
 	background-color: white;
 }
 
 h1 {
-	margin-top: 20px;
+	margin: 0;
 	color: yellow;
 	font-family: fontz;
 	padding: 10px;
 	text-align: center;
-
 }
 @font-face {
 	font-family: fontz;
@@ -40,5 +27,31 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #000000;
+}
 
+.main {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.main aside {
+	width: 40%;
+}
+
+#google-map {
+	width: 60%;
+	border: 5px solid lightblue;
+	height: 100%;
+}
+h1 {
+	text-align: center;
+	color: yellow;
+	font-family: fontz;
+}
+#board {
+	height: 20%;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
 }
