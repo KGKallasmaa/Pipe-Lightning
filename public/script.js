@@ -1,6 +1,6 @@
 let map;
 
-const markers = [{lat: 50.5689, lng: 60.4565}, {lat: 51.5689, lng: 61.4565}];
+
 function initMap() {
 	map = new google.maps.Map(document.getElementById('google-map'), {
 		center: { lat: -34.397, lng: 150.644 },
@@ -16,6 +16,9 @@ function initMap() {
 
 
 function createMarkers(markers) {
+	if (!markers.isEmpty) {
+		markers = [{lat: 50.5689, lng: 60.4565}, {lat: 51.5689, lng: 61.4565}];
+	}
 	markers.deals.map(el => {
 		var pos = { lat: el.lat, lng: el.long }
 		const marker = new google.maps.Marker({
